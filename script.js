@@ -1,4 +1,5 @@
-var tl = gsap.timeline(); // corrected 'timeliner' to 'timeline'
+function loadingAnimatin(){
+  var tl = gsap.timeline(); // corrected 'timeliner' to 'timeline'
 
 // Animate 'h1' element
 tl.from("h1", {
@@ -56,3 +57,20 @@ tl.to(
   },
   "-=1.5"
 ); // start 1.5 seconds before the previous animation ends
+
+}
+
+function cursorAnimatin() {
+  document.addEventListener("mouseover", function (dets) {
+    gsap.to('#crsr', {
+      left: dets.pageX,
+      top: dets.pageY,
+    });
+  });
+  Shery.makeMagnet("#nav-part2 h4" /* Element to target.*/, {
+    //Parameters are optional.
+    
+  });
+}
+loadingAnimatin();
+cursorAnimatin();
