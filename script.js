@@ -13,6 +13,7 @@ tl.from("h1", {
 // Animate '#line1-part1' and '.line h2' elements
 tl.from("#line1-part1", {
   opacity: 0,
+  duration:1,
   onStart: function () {
     var h5timer = document.querySelector("#line1-part1 h5");
     var grow = 0;
@@ -22,13 +23,14 @@ tl.from("#line1-part1", {
       } else {
         h5timer.innerHTML = grow;
       }
-    }, 20); // keep alive
+    }, 18); // keep alive
   },
-});
+}, "-=0.5"); // start 0.5 seconds before the previous animation ends
 tl.to(".line h2", {
     animationName: "anime",
     opacity: 1,
-  });
+    duration: 1,
+  }, "-=0.5");
 // Animate '#loder' element
 tl.to("#loder", {
   opacity: 0,
@@ -57,8 +59,20 @@ tl.to(
   },
   "-=1.5"
 ); // start 1.5 seconds before the previous animation ends
+tl.from("#nav ", {
+  opacity: 0,
+  duration:1,
+}, "-=1"); // start 1.5 seconds before the previous animation ends
+
+tl.from("#hero1 h2,#hero2 h2,#hero3 h3,#hero4 h2", {
+  y: 100,
+  stagger: 0.2,
+  
+}); // start 0.5 seconds before the previous animation ends
+
 
 }
+
 
 function cursorAnimatin() {
   document.addEventListener("mouseover", function (dets) {

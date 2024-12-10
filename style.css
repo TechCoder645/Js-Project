@@ -131,14 +131,33 @@ main {
   /* background-color: red; */
   width: 75%;
   margin-left: 25%;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+
  }
  .hero:nth-child(2){
   margin-top: 15vh;
  }
- .hero h1{
+ .hero h2{
   font-size: 5vw;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 5vw;
+  
  }
- 
+  .hero h3{
+    font-size: 5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 5vw;
+  }
+.hero h3:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 200;
+  }
+   
