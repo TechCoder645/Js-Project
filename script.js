@@ -71,15 +71,15 @@ function loadingAnimatin() {
     "#nav ",
     {
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
     },
     "-=1"
   ); // start 1.5 seconds before the previous animation ends
 
-  tl.from("#hero1 h2,#hero2 h2,#hero3 h3,#hero4 h2", {
-    y: 100,
-    stagger: 0.2,
-  }); // start 0.5 seconds before the previous animation ends
+  tl.from(".hero h2",{
+  y:100,
+  stagger:0.4,
+  })
 }
 
 function cursorAnimatin() {
