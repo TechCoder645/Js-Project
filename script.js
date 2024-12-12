@@ -95,3 +95,4 @@ function cursorAnimatin() {
 }
 loadingAnimatin();
 cursorAnimatin();
+
