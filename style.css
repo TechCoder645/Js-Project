@@ -11,6 +11,10 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
 }
+
+body{
+  overflow-x: hidden;
+}
 #crsr{
   height: 2vw;
   width: 2vw;
@@ -104,13 +108,16 @@ body {
 
 main {
   position: relative;
-  background-color: #111;
+  background-color: #151515;
 }
 #page1 {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-color: #151515;
 }
+
+
  #page1 #nav{
   display: flex;
   align-items: center;
@@ -218,13 +225,135 @@ font-weight: 1000;
  }
  
  #page4{
-  min-height: 100vh;
+  min-height: 200vh;
   width: 100%;
   background-color: #151515;
   position: relative;
+  padding-top: 5vh;
  }
  #page4-content{
   width: 72vw;
   position: relative;
   margin-left: 28%;
  }
+
+ #page4-content h1{
+  font-size: 7vh;
+  text-transform: uppercase;
+ }
+
+ #page4-content .underline {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  margin: 5vw 0;
+}
+
+#page4-content > p {
+  font-size: 2vw;
+  width: 50%;
+  margin-bottom: 5vw;
+}
+
+ #page4-flex{
+  display: flex;
+ }
+
+ #page4-flex img{
+  width: 48%;
+ }
+
+ #page4-flex p{
+  font-size: 1vw;
+  width: 20%;
+  margin-left: 2vw;
+ }
+
+ #page4-blue-div{
+  background-color: #3F7DF4;
+  width: 32vw;
+  padding: 4vw 2vw;
+  position: relative;
+  margin-top: -35vh;
+  margin-left: 25vw;
+ }
+
+ .blue-div-elem{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: red; */
+  padding: 1.5vw 0;
+  border-bottom: 2px solid #d3cdcd;
+ }
+
+ .blue-div-elem h4{
+  font-size: 1.5vw;
+  font-weight: 800;
+ }
+
+ .blue-div-elem p{
+  width: 50%;
+  font-size: .8vw;
+ }
+
+ #page5{
+  height: 100vh;
+  width: 100%;
+  padding: 5vw 0;
+  background-color: #151515;
+  position: relative;
+ }
+
+ .elem{
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+
+ }
+ .elem h1{
+ font-size: 7vw;
+ -webkit-text-stroke: 1px #fff;
+ font-weight: 400;
+ text-transform: uppercase;
+ color: transparent;
+ display: inline-block;
+ margin-right: 16px;
+ animation-name: anim;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+ }
+
+ @keyframes anim{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(calc(-100% - 16px));
+  }
+ }
+
+ .elem2{
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+
+ }
+ .elem2 h1{
+ font-size: 7vw;
+ -webkit-text-stroke: 1px #fff;
+ font-weight: 400;
+ text-transform: uppercase;
+ color: transparent;
+ display: inline-block;
+ margin-right: 16px;
+ transform: translateX(calc(-100% - 16px));
+ animation-name: anime;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+ }
+
+ 
