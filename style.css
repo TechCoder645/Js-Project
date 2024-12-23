@@ -15,16 +15,13 @@ body {
 body{
   overflow-x: hidden;
 }
-#crsr{
-  height: 2vw;
-  width: 2vw;
-  border-radius: 50%;
-  /* background-color: white; */
-  border: 1px solid rgb(170, 164, 164);
-  position: fixed;
-  z-index: 9999;
+.mousefollower {
+  border: 2px solid #fff;
+  background-color: rgb(255, 255, 255);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
   mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
 }
 #loder {
   height: 100%;
@@ -139,11 +136,10 @@ main {
  width: 71%;
  margin-left: 29%;
  height: fit-content;
- overflow-y: hidden;
+ overflow: hidden;
  display: flex;
  align-items: center;
- overflow-x: auto;
-position: relative;
+ 
  }
 
  .hero:nth-child(2){
@@ -156,17 +152,18 @@ position: relative;
   text-transform: uppercase;
   line-height: 6vw;
   display: inline-block;
+  position: relative;
  
 }
-#hero1 h2 ::before{
+#hero1::before {
   content: "01";
+  font-family: "silk serif";
+  font-style: italic;
   position: absolute;
-  font-size: 3vw;
-  font-weight: 100;
-  font-family: silk serif;
-  left: -15%;
-  top: -10%;
-background-color: aqua;
+  font-size: 3.3vw;
+  font-weight: 500;
+  left: 20%;
+  top: 25%;
 }
 
 #hero3 h2{
@@ -180,6 +177,20 @@ font-weight: 1000;
     color: transparent;
     font-weight: 200;
     border-bottom: transparent;
+  }
+  
+  #flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    /* opacity: 0; */
+  }
+  #hero3{
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
   }
    
  #page2{
@@ -196,7 +207,6 @@ font-weight: 1000;
   width: 70vw;
   position: relative;
   left: 29%;
-  background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg;);
  }
 
  #video-container img{
@@ -204,13 +214,15 @@ font-weight: 1000;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  top: 0;
+  top: 0%;
+  opacity: 1;
  }
 
  #video-container video{
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0;
  }
  #video-cursor{
   background-color: #FFA63D;
@@ -313,6 +325,7 @@ left: -30vw;
   border: 2px solid #fff;
   border-radius: 50%;
   display: flex;
+  position: relative;
   margin-top: 35vh;
   margin-left: 5vw;
   align-items: center;
@@ -329,6 +342,7 @@ left: -30vw;
   border: 2px solid #fff;
   border-radius: 50%;
   display: flex;
+  position: relative;
   margin-top: -5vh;
   margin-left: 5vw;
   align-items: center;
@@ -339,6 +353,47 @@ left: -30vw;
   height: 40%;
   rotate: -45deg;
  }
+
+ .circle-in{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  /* color: #000; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition-delay: 0.6s;
+  border-radius: 50%;
+ }
+.circle-in p{
+font-size: 0.8vw;
+color: #000;
+width: 60%;
+font-weight: 500;
+scale: 0;
+transition: all ease 0.5s;
+transition-delay: 0.3s;
+opacity: 0;
+}
+.page3-circle1:hover .circle-in{
+  scale: 1;
+}
+.page3-circle1:hover p{
+  scale: 1;
+  opacity: 1;
+}
+
+.page3-circle2:hover .circle-in{
+  scale: 1;
+}
+.page3-circle2:hover p{
+  scale: 1;
+  opacity: 1;
+}
 
  #page4{
   min-height: 280vh;
