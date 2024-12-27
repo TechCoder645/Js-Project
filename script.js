@@ -58,7 +58,7 @@ function loadingAnimatin() {
           } else {
             h5timer.innerHTML = grow;
           }
-        }, 18); // keep alive
+        }, 15); // keep alive
       },
     },
     "-=0.5"
@@ -76,7 +76,7 @@ function loadingAnimatin() {
   tl.to("#loder", {
     opacity: 0,
     duration: 1.5,
-    delay: 0.5,
+    delay: 0.4,
   });
 
   // Animate '#page1' element relative to the end of the previous animation
